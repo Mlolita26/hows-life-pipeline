@@ -1,7 +1,7 @@
 # How's Life? refresh - 2026-09-14
 
 Source: `https://sdmx.oecd.org/public/rest/data/OECD.WISE.WDP,DSD_HSL@DF_HSL_CWB,1.1/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels`
-Retrieved: 2026-09-14T20:40:19Z (7.1s, 31.7 MB)
+Retrieved: 2026-09-14T21:08:44Z (1.1s, 31.7 MB)
 SHA-256: `33b494c2e5a892f3...`
 Observations: **111,266** across 47 reference areas and 68 indicators
 
