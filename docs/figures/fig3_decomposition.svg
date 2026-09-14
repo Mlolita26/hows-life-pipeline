@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='432.00pt' viewBox='0 0 648.00 432.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='446.40pt' viewBox='0 0 648.00 446.40'>
 <g class='svglite'>
 <defs>
   <style type='text/css'><![CDATA[
@@ -21,52 +21,69 @@
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
 <defs>
-  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw0MzIuMDA='>
-    <rect x='0.00' y='0.00' width='648.00' height='432.00' />
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw0NDYuNDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='446.40' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MzIuMDA=)'>
-<rect x='0.00' y='0.000000000000057' width='648.00' height='432.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0NDYuNDA=)'>
+<rect x='0.00' y='0.00' width='648.00' height='446.40' style='stroke-width: 0.75; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMzIuNzh8NjQyLjUyfDUwLjcwfDM5MC42Ng=='>
-    <rect x='32.78' y='50.70' width='609.74' height='339.97' />
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw0MTAuNDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='410.40' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzIuNzh8NjQyLjUyfDUwLjcwfDM5MC42Ng==)'>
-<polyline points='32.78,390.66 642.52,390.66 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,302.82 642.52,302.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,214.97 642.52,214.97 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,127.12 642.52,127.12 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='118.85,390.66 118.85,50.70 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='264.72,390.66 264.72,50.70 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='410.59,390.66 410.59,50.70 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='556.46,390.66 556.46,50.70 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<rect x='60.50' y='178.75' width='116.70' height='211.91' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3B528B;' />
-<rect x='206.37' y='158.26' width='116.70' height='20.49' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5DC863;' />
-<rect x='352.24' y='87.12' width='116.70' height='71.14' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5DC863;' />
-<rect x='498.11' y='87.12' width='116.70' height='303.54' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3B528B;' />
-<text x='118.85' y='175.23' text-anchor='middle' style='font-size: 10.24px; font-weight: bold; font-family: "Liberation Sans";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>60.3 m</text>
-<text x='264.72' y='154.74' text-anchor='middle' style='font-size: 10.24px; font-weight: bold; font-family: "Liberation Sans";' textLength='32.14px' lengthAdjust='spacingAndGlyphs'>+5.8 m</text>
-<text x='410.59' y='83.60' text-anchor='middle' style='font-size: 10.24px; font-weight: bold; font-family: "Liberation Sans";' textLength='37.83px' lengthAdjust='spacingAndGlyphs'>+20.2 m</text>
-<text x='556.46' y='83.60' text-anchor='middle' style='font-size: 10.24px; font-weight: bold; font-family: "Liberation Sans";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>86.4 m</text>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MTAuNDA=)'>
+<rect x='0.00' y='0.00' width='648.00' height='410.40' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
-<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MzIuMDA=)'>
-<text x='27.85' y='393.69' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='27.85' y='305.84' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='27.85' y='217.99' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='27.85' y='130.14' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='118.85' y='401.65' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='19.56px' lengthAdjust='spacingAndGlyphs'>2010</text>
-<text x='264.72' y='401.65' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='61.56px' lengthAdjust='spacingAndGlyphs'>Cities got hotter</text>
-<text x='264.72' y='411.16' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='70.38px' lengthAdjust='spacingAndGlyphs'>(climate, Shapley)</text>
-<text x='410.59' y='401.65' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='67.97px' lengthAdjust='spacingAndGlyphs'>Populations aged</text>
-<text x='410.59' y='411.16' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='90.75px' lengthAdjust='spacingAndGlyphs'>(demography, Shapley)</text>
-<text x='556.46' y='401.65' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='19.56px' lengthAdjust='spacingAndGlyphs'>2020</text>
-<text transform='translate(13.05,220.68) rotate(-90)' text-anchor='middle' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='134.33px' lengthAdjust='spacingAndGlyphs'>Millions of people aged 65+</text>
-<text x='5.48' y='31.05' style='font-size: 11.00px;fill: #595959; font-family: "Liberation Sans";' textLength='591.36px' lengthAdjust='spacingAndGlyphs'>Residents aged 65+ in OECD functional urban areas with more than 30 days a year of strong heat stress (UTCI &gt;= 32 C).</text>
-<text x='5.48' y='42.93' style='font-size: 11.00px;fill: #595959; font-family: "Liberation Sans";' textLength='499.97px' lengthAdjust='spacingAndGlyphs'>Shapley split of the change into climate and demography; the interaction term is shared between them.</text>
-<text x='5.48' y='15.11' style='font-size: 14.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='299.41px' lengthAdjust='spacingAndGlyphs'>Older people living in hot cities: 2010 to 2020</text>
-<text x='32.78' y='424.66' style='font-size: 9.00px;fill: #737373; font-family: "Liberation Sans";' textLength='528.33px' lengthAdjust='spacingAndGlyphs'>Balanced panel of 1022 cities present in both years. Source: OECD CFE DF_HEAT_STRESS and DF_AGE_SEX via the SDMX API.</text>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0NDYuNDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNDQuNjV8NjMwLjA3fDExMi4yOXwzNzcuNDM='>
+    <rect x='44.65' y='112.29' width='585.42' height='265.14' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDQuNjV8NjMwLjA3fDExMi4yOXwzNzcuNDM=)'>
+<rect x='44.65' y='112.29' width='585.42' height='265.14' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<polyline points='44.65,377.43 630.07,377.43 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<polyline points='44.65,308.92 630.07,308.92 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<polyline points='44.65,240.41 630.07,240.41 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<polyline points='44.65,171.89 630.07,171.89 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<line x1='169.60' y1='212.16' x2='215.88' y2='212.16' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
+<line x1='314.22' y1='196.18' x2='360.50' y2='196.18' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
+<line x1='458.84' y1='140.70' x2='505.12' y2='140.70' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
+<rect x='71.26' y='212.16' width='98.34' height='165.27' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
+<rect x='215.88' y='196.18' width='98.34' height='15.98' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
+<rect x='360.50' y='140.70' width='98.34' height='55.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
+<rect x='505.12' y='140.70' width='98.34' height='236.73' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
+<text x='120.43' y='207.77' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>60.3 m</text>
+<text x='265.05' y='191.79' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='32.14px' lengthAdjust='spacingAndGlyphs'>+5.8 m</text>
+<text x='409.67' y='136.31' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='37.83px' lengthAdjust='spacingAndGlyphs'>+20.2 m</text>
+<text x='554.29' y='136.31' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>86.4 m</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0NDYuNDA=)'>
+<text x='39.72' y='380.58' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='39.72' y='312.07' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='39.72' y='243.56' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='39.72' y='175.04' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='120.43' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>2010</text>
+<text x='265.05' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='70.05px' lengthAdjust='spacingAndGlyphs'>Cities got hotter</text>
+<text x='265.05' y='400.33' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='38.33px' lengthAdjust='spacingAndGlyphs'>(climate)</text>
+<text x='409.67' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='77.30px' lengthAdjust='spacingAndGlyphs'>Populations aged</text>
+<text x='409.67' y='400.33' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='62.25px' lengthAdjust='spacingAndGlyphs'>(demography)</text>
+<text x='554.29' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>2020</text>
+<text transform='translate(25.10,244.86) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='122.05px' lengthAdjust='spacingAndGlyphs'>Millions of people aged 65+</text>
+<rect x='45.36' y='84.76' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
+<rect x='108.63' y='84.76' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
+<text x='67.41' y='96.28' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='35.03px' lengthAdjust='spacingAndGlyphs'>Change</text>
+<text x='130.68' y='96.28' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='23.91px' lengthAdjust='spacingAndGlyphs'>Level</text>
+<text x='17.93' y='57.91' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='596.89px' lengthAdjust='spacingAndGlyphs'>Residents aged 65+ in functional urban areas with more than 30 days a year of strong heat stress (UTCI ≥ 32 °C), millions.</text>
+<text x='17.93' y='71.77' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='527.53px' lengthAdjust='spacingAndGlyphs'>Shapley split of the change into climate and demography (interaction shared). Balanced panel of 1022 cities.</text>
+<text x='17.93' y='25.40' style='font-size: 16.00px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='351.53px' lengthAdjust='spacingAndGlyphs'>Older people in hot OECD cities, 2010 to 2020:</text>
+<text x='17.93' y='42.68' style='font-size: 16.00px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='297.20px' lengthAdjust='spacingAndGlyphs'>most of the rise is ageing, not warming</text>
+<rect x='0.00' y='410.40' width='648.00' height='36.00' style='stroke-width: 0.75; stroke: none; fill: #0D2240;' />
+<text x='12.96' y='425.86' style='font-size: 9.00px; font-weight: bold;fill: #FFFFFF; font-family: "Arial";' textLength='144.31px' lengthAdjust='spacingAndGlyphs'>How's Life? refresh &amp; QA pipeline</text>
+<text x='12.96' y='439.04' style='font-size: 7.60px;fill: #C9D6E6; font-family: "Arial";' textLength='436.72px' lengthAdjust='spacingAndGlyphs'>Source: OECD CFE DSD_FUA_CLIM@DF_HEAT_STRESS and DSD_FUA_DEMO@DF_AGE_SEX, retrieved via the SDMX API</text>
 </g>
 </g>
 </svg>

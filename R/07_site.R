@@ -114,18 +114,18 @@ build_site <- function(out_dir = "docs", data_dir = "out", raw_dir = "data/raw",
   )
 
   css <- '
-  :root{--ink:#1a1a2e;--muted:#4a5568;--bg:#fbfaf7;--card:#fff;--line:#e3e0d8;--acc:#2a5d8f;--acc2:#8a6d1f}
+  :root{--ink:#141a24;--navy:#0d2240;--muted:#4a5568;--bg:#f7f9fb;--card:#fff;--line:#dfe5ec;--acc:#245c99;--acc2:#5ba3de}
   *{box-sizing:border-box}html{scroll-behavior:smooth}
   body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
   a{color:var(--acc)}a:focus,button:focus{outline:3px solid #f2c14e;outline-offset:2px}
   .skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:10}.skip:focus{left:1rem}
-  header{background:var(--ink);color:#fff;padding:1.4rem 1rem}
+  header{background:var(--navy);color:#fff;padding:1.4rem 1rem}
   .wrap{max-width:1080px;margin:0 auto;padding:0 1rem}
-  header h1{margin:.2rem 0 .3rem;font-size:1.65rem;line-height:1.25}header p{margin:0;color:#cfd3dc;max-width:70ch}
+  header h1{margin:.2rem 0 .3rem;font-size:1.65rem;line-height:1.25}header p{margin:0;color:#c9d6e6;max-width:70ch}
   .toggle{display:flex;gap:.4rem;justify-content:flex-end;margin-bottom:.6rem}
-  .toggle button{background:transparent;color:#fff;border:1px solid #6b7280;border-radius:999px;padding:.25rem .8rem;cursor:pointer;font:inherit}
+  .toggle button{background:transparent;color:#fff;border:1px solid #5ba3de;border-radius:999px;padding:.25rem .8rem;cursor:pointer;font:inherit}
   .toggle button[aria-pressed="true"]{background:#fff;color:var(--ink);border-color:#fff}
-  main{padding:1.5rem 0 3rem}section{margin:2.2rem 0}h2{font-size:1.35rem;border-bottom:2px solid var(--line);padding-bottom:.3rem;margin:0 0 .8rem}
+  main{padding:1.5rem 0 3rem}section{margin:2.2rem 0}h2{font-size:1.35rem;border-bottom:3px solid var(--acc2);padding-bottom:.3rem;margin:0 0 .8rem;color:var(--navy)}
   h3{font-size:1.05rem;margin:1.2rem 0 .4rem}p{max-width:75ch}.lead{font-size:1.1rem}
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin:1rem 0}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem}
@@ -134,11 +134,11 @@ build_site <- function(out_dir = "docs", data_dir = "out", raw_dir = "data/raw",
   figure img{max-width:100%;height:auto;display:block}figcaption{color:var(--muted);font-size:.9rem;margin-top:.5rem}
   .tablewrap{overflow-x:auto;margin:.8rem 0}table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card)}
   caption{text-align:left;font-weight:600;padding:.4rem 0;color:var(--ink)}th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left}
-  th{background:#f1efe9}td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
-  .note{background:#fff8e6;border-left:4px solid var(--acc2);padding:.7rem 1rem;border-radius:4px}
+  th{background:#e9f1f9;color:var(--navy)}td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
+  .note{background:#eef5fc;border-left:4px solid var(--acc);padding:.7rem 1rem;border-radius:4px}
   .box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.2rem}
-  code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}pre{background:#f1efe9;padding:.8rem;border-radius:6px;overflow-x:auto}
-  footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding:1.2rem 0}
+  code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}pre{background:#eef2f6;padding:.8rem;border-radius:6px;overflow-x:auto}
+  footer{color:#c9d6e6;background:var(--navy);font-size:.9rem;padding:1.2rem 0;margin-top:2rem}footer a{color:#fff}
   html[data-lang="en"] [lang="fr"]{display:none}html[data-lang="fr"] [lang="en"]{display:none}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   '
@@ -219,8 +219,8 @@ build_site <- function(out_dir = "docs", data_dir = "out", raw_dir = "data/raw",
 <tr><td>', bi("Adaptive capacity", "Capacité d\'adaptation"), '</td><td>', bi("Green area per person; cooling degree days (energy burden)", "Espaces verts par habitant ; degrés-jours de refroidissement"), '</td><td><code>DSD_FUA_ENV@DF_GREEN_AREA</code>, <code>DSD_FUA_ENER@DF_CDD_HDD</code></td></tr>
 </tbody></table></div>',
   figure("fig2_exposure_vs_risk",
-         "Scatter plot of countries ranked two ways. Horizontal axis: rank on heat exposure alone. Vertical axis: rank on risk to residents aged 65 and over. Points sized by the number of older residents at risk and coloured by the share in top-quintile-risk cities. Countries far from the diagonal change rank most.",
-         "Nuage de points des pays classés de deux façons : exposition seule en abscisse, risque pour les 65 ans et plus en ordonnée.",
+         "Slope chart: each country is a line from its rank on heat exposure alone (left) to its rank on risk to residents aged 65 and over (right). The six countries whose rank moves most are highlighted and labelled with the size of the move; the rest are grey.",
+         "Graphique de pentes : chaque pays est une ligne de son rang sur l’exposition seule (gauche) à son rang sur le risque pour les 65 ans et plus (droite). Les six pays dont le rang bouge le plus sont mis en évidence.",
          glue("Figure 2. The same countries ranked by exposure alone (what indicator 9_3 measures) and by risk to older residents. Spearman ρ = {smv['spearman_rho']} across {smv['n_countries']} countries. {smv['misplaced_share65_pct']}% of at-risk urban residents aged 65+ live in countries the exposure-only ranking places outside its top quintile."),
          glue("Figure 2. Les mêmes pays classés par exposition seule et par risque pour les aînés. ρ de Spearman = {smv['spearman_rho']} sur {smv['n_countries']} pays.")),
 '<h3>', bi("What the test says — honestly", "Ce que dit le test — honnêtement"), '</h3>

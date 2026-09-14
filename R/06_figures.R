@@ -1,40 +1,91 @@
-# 06_figures.R — the three figures, each written once as PNG (print) and SVG (web)
-# from the same specification. Colour is viridis throughout (colour-blind safe)
-# and never the only carrier of meaning: every mark is also labelled.
+# 06_figures.R — three figures in an OECD-like visual register.
+#
+# Forms follow the FT Visual Vocabulary: a slope chart for how ranks change
+# between two measures (Ranking), a waterfall for a change split into signed
+# components (Part-to-whole), a heatmap for a category x time grid (Change over
+# time). Colour follows the job, not taste, and every categorical colour used
+# here passed scripts/validate_palette.js (dataviz skill) on a white surface:
+#   primary  #245c99  (OECD-style mid navy; L in band, >= 3:1 on white)
+#   accent   #5ba3de  (light blue; 2.7:1 -> relief by direct labels, always)
+#   context  #9aa5b4  (de-emphasis grey: never carries identity alone)
+# The deep OECD navy #0d2240 fails the mark-lightness band, so it is chrome only:
+# the footer band, and the title ink. Sequential magnitude uses one blue ramp,
+# light -> dark. Text never wears a series colour.
 
 suppressPackageStartupMessages({
   library(dplyr)
   library(tidyr)
   library(readr)
   library(ggplot2)
+  library(grid)
   library(glue)
   library(cli)
 })
 
-fig_theme <- function(base = 11) {
+OECD_NAVY    <- "#0d2240"
+OECD_PRIMARY <- "#245c99"
+OECD_ACCENT  <- "#5ba3de"
+OECD_GREY    <- "#9aa5b4"
+OECD_INK     <- "#141a24"
+OECD_INK2    <- "#4a5568"
+OECD_GRID    <- "#e6e9ee"
+OECD_SURFACE <- "#ffffff"
+# Sequential blue ramp (light -> dark, single hue; monotone L and 13 deg hue
+# spread verified). The lightest step means "nearly none" and may recede.
+OECD_RAMP <- c("#c5dff5", "#9fc7ea", "#6fa9dc", "#4688c9", "#2f6fb0", "#245c99",
+               "#1a4172", "#0d2240")
+
+oecd_theme <- function(base = 11) {
   theme_minimal(base_size = base) +
     theme(
+      plot.background  = element_rect(fill = OECD_SURFACE, colour = NA),
+      panel.background = element_rect(fill = OECD_SURFACE, colour = NA),
       plot.title.position = "plot",
-      plot.title = element_text(face = "bold", size = base + 3),
-      plot.subtitle = element_text(colour = "grey35", size = base),
-      plot.caption = element_text(colour = "grey45", size = base - 2, hjust = 0),
+      plot.title    = element_text(face = "bold", size = base + 5, colour = OECD_INK,
+                                   margin = margin(b = 4)),
+      plot.subtitle = element_text(size = base, colour = OECD_INK2, lineheight = 1.05,
+                                   margin = margin(b = 10)),
       panel.grid.minor = element_blank(),
+      panel.grid.major = element_line(colour = OECD_GRID, linewidth = 0.4),
+      axis.title = element_text(colour = OECD_INK2, size = base - 1),
+      axis.text  = element_text(colour = OECD_INK2),
       legend.position = "bottom",
-      axis.title = element_text(colour = "grey30")
+      legend.title = element_text(colour = OECD_INK2, size = base - 1),
+      legend.text  = element_text(colour = OECD_INK2, size = base - 1),
+      plot.margin = margin(14, 18, 8, 18)
     )
 }
 
-save_both <- function(p, name, dir = "docs/figures", w = 9, h = 6) {
+#' Render a plot with the OECD-style footer band: deep navy strip, white text,
+#' data source on the right. Written once as PNG (print) and SVG (web).
+save_oecd <- function(p, name, source_text, dir = "docs/figures", w = 9, h = 6,
+                      band_in = 0.5) {
   dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+  draw <- function() {
+    grid.newpage()
+    grid.rect(gp = gpar(fill = OECD_SURFACE, col = NA))
+    lay <- grid.layout(2, 1, heights = unit(c(h - band_in, band_in), "in"))
+    pushViewport(viewport(layout = lay))
+    pushViewport(viewport(layout.pos.row = 1)); print(p, newpage = FALSE); upViewport()
+    pushViewport(viewport(layout.pos.row = 2))
+    grid.rect(gp = gpar(fill = OECD_NAVY, col = NA))
+    # Two lines, both left-aligned: the brand line never collides with a long
+    # source string, whatever the canvas width.
+    grid.text("How's Life? refresh & QA pipeline", x = unit(0.18, "in"), y = unit(0.66, "npc"),
+              just = "left", gp = gpar(col = "white", fontsize = 9, fontface = "bold"))
+    grid.text(source_text, x = unit(0.18, "in"), y = unit(0.28, "npc"), just = "left",
+              gp = gpar(col = "#c9d6e6", fontsize = 7.6))
+    upViewport(2)
+  }
   ragg::agg_png(file.path(dir, paste0(name, ".png")), width = w, height = h,
-                units = "in", res = 160, background = "white")
-  print(p); dev.off()
+                units = "in", res = 160, background = OECD_SURFACE)
+  draw(); dev.off()
   svglite::svglite(file.path(dir, paste0(name, ".svg")), width = w, height = h)
-  print(p); dev.off()
+  draw(); dev.off()
   cli_alert_success("figure {.file {name}} (png + svg)")
 }
 
-# ── Figure 1: where the data gaps are ────────────────────────────────────────
+# ── Figure 1: where the data gaps are (heatmap, sequential) ─────────────────
 
 fig_coverage <- function(snapshot_path, out_dir = "docs/figures") {
   obs <- hsl_read(snapshot_path)
@@ -49,83 +100,104 @@ fig_coverage <- function(snapshot_path, out_dir = "docs/figures") {
     left_join(dom, by = "domain") %>%
     mutate(domain_lab = coalesce(domain_lab, domain))
 
+  # Dimensions ordered by mean reporting lag of their indicators, largest first,
+  # so the least current dimension - Environmental quality - leads the eye.
+  this_year <- as.integer(format(Sys.Date(), "%Y"))
+  dom_order <- cov %>% group_by(domain_lab, measure) %>%
+    summarise(lag = this_year - max(time_period), .groups = "drop") %>%
+    group_by(domain_lab) %>% summarise(mean_lag = mean(lag), .groups = "drop") %>%
+    arrange(desc(mean_lag), domain_lab) %>% pull(domain_lab)
+  cov$domain_lab <- factor(cov$domain_lab, levels = dom_order)
   order_m <- cov %>% group_by(domain_lab, measure) %>%
     summarise(latest = max(time_period), .groups = "drop") %>%
     arrange(domain_lab, latest) %>% pull(measure)
   cov$measure <- factor(cov$measure, levels = unique(order_m))
 
   p <- ggplot(cov, aes(x = time_period, y = measure, fill = n_countries)) +
-    geom_tile(colour = "white", linewidth = 0.3) +
-    geom_text(aes(label = ifelse(n_countries >= 40, n_countries, "")),
-              size = 2.2, colour = "white") +
-    scale_fill_viridis_c(name = "Countries reporting", option = "viridis",
-                         direction = 1, limits = c(0, 47)) +
+    geom_tile(colour = OECD_SURFACE, linewidth = 0.6) +
+    geom_text(aes(label = ifelse(n_countries >= 44, n_countries, "")),
+              size = 2.1, colour = "white") +
+    scale_fill_gradientn(name = "Countries reporting", colours = OECD_RAMP,
+                         limits = c(0, 47), breaks = c(1, 10, 20, 30, 40, 47)) +
     scale_x_continuous(breaks = seq(2005, 2025, 5), expand = c(0, 0)) +
     facet_grid(domain_lab ~ ., scales = "free_y", space = "free_y", switch = "y") +
     labs(
-      title = "Where the How's Life? database has data - and where it does not",
-      subtitle = "Country-average series by indicator and year. Blank = no country reported.",
-      x = NULL, y = NULL,
-      caption = "Source: OECD How's Life? database (DSD_HSL@DF_HSL_CWB) via the SDMX API. Inequality variants (_VER/_DEP) omitted."
+      title = "Environmental quality is the least current part of the How's Life? database",
+      subtitle = "Number of countries with a country-average value, by indicator and year. Blank = no country reported.\nInequality variants (_VER, _DEP) omitted. Green space (9_1) was last published in 2018, for 29 of 47 countries.",
+      x = NULL, y = NULL
     ) +
-    fig_theme(10) +
-    theme(strip.text.y.left = element_text(angle = 0, hjust = 1, face = "bold", size = 8),
+    oecd_theme(10) +
+    theme(strip.text.y.left = element_text(angle = 0, hjust = 1, face = "bold", size = 8,
+                                           colour = OECD_INK),
           strip.placement = "outside", axis.text.y = element_text(size = 7),
-          panel.spacing.y = unit(2, "pt"))
-  save_both(p, "fig1_coverage", out_dir, w = 10, h = 11)
+          panel.spacing.y = unit(3, "pt"), panel.grid.major = element_blank(),
+          legend.key.width = unit(28, "pt"), legend.key.height = unit(8, "pt"))
+  save_oecd(p, "fig1_coverage",
+            "Source: OECD How's Life? database (OECD.WISE.WDP, DSD_HSL@DF_HSL_CWB), retrieved via the SDMX API",
+            out_dir, w = 10, h = 11.5)
 }
 
-# ── Figure 2: exposure-only vs risk-based country ranking ────────────────────
+# ── Figure 2: exposure vs risk — a slope chart (Ranking) ────────────────────
 
 fig_rank_test <- function(country_path = "out/env/country_indicator.csv",
                           summary_path = "out/env/rank_test_summary.csv",
-                          out_dir = "docs/figures") {
+                          out_dir = "docs/figures", n_highlight = 6) {
   cty <- read_csv(country_path, show_col_types = FALSE)
   sm  <- read_csv(summary_path, show_col_types = FALSE)
   rho <- sm$value[sm$metric == "spearman_rho"]
   n   <- nrow(cty)
 
-  p <- ggplot(cty, aes(x = rank_exposure, y = rank_risk)) +
-    annotate("rect", xmin = 0.5, xmax = ceiling(n / 5) + 0.5, ymin = ceiling(n / 5) + 0.5,
-             ymax = n + 0.5, fill = "grey92", colour = NA) +
-    # Axes are reversed (rank 1 at top-right), so anchor the label at the
-    # rectangle's left edge and let it run towards the origin.
-    annotate("text", x = ceiling(n / 5) + 0.3, y = n - 0.5, hjust = 0, vjust = 0,
-             size = 3, colour = "grey35", lineheight = 0.9,
-             label = "Top quintile on heat exposure alone,\nbut not on risk") +
-    geom_abline(slope = 1, intercept = 0, colour = "grey60", linetype = "dashed") +
-    geom_point(aes(size = risk_n65 / 1e6, colour = risk_share65), alpha = 0.9) +
-    ggrepel_or_text(cty) +
-    scale_x_reverse(breaks = c(1, 5, 10, 15, 20, 25, 30), expand = expansion(add = 1)) +
-    scale_y_reverse(breaks = c(1, 5, 10, 15, 20, 25, 30), expand = expansion(add = 1)) +
-    scale_colour_viridis_c(name = "Urban 65+ in top-risk cities (%)",
-                           option = "plasma", end = 0.9) +
-    scale_size_area(name = "Urban 65+ at risk (m)", max_size = 11,
-                    breaks = c(1, 5, 10, 20)) +
+  # Emphasis: the biggest movers in the primary blue, everyone else in grey.
+  # Direction is carried by the slope itself and by the labels - never by hue.
+  movers <- cty %>% arrange(desc(abs(rank_shift))) %>% slice_head(n = n_highlight) %>% pull(iso3)
+  cty <- cty %>% mutate(
+    emph  = iso3 %in% movers,
+    left  = rank_exposure, right = rank_risk,
+    lab_l = glue("{iso3}  {left}"),
+    lab_r = glue("{right}  {iso3}"),
+    lab_r = ifelse(emph, glue("{lab_r}   ({sprintf('%+d', -rank_shift)})"), lab_r)
+  )
+  long <- cty %>% select(iso3, emph, left, right) %>%
+    pivot_longer(c(left, right), names_to = "side", values_to = "rank") %>%
+    mutate(x = ifelse(side == "left", 0, 1))
+
+  p <- ggplot() +
+    geom_segment(data = filter(cty, !emph),
+                 aes(x = 0, xend = 1, y = left, yend = right),
+                 colour = OECD_GREY, linewidth = 0.7, alpha = 0.8) +
+    geom_segment(data = filter(cty, emph),
+                 aes(x = 0, xend = 1, y = left, yend = right),
+                 colour = OECD_PRIMARY, linewidth = 2, lineend = "round") +
+    geom_point(data = filter(long, !emph), aes(x, rank), colour = OECD_GREY, size = 2.2,
+               stroke = 0.8, fill = OECD_SURFACE, shape = 21) +
+    geom_point(data = filter(long, emph), aes(x, rank), colour = OECD_PRIMARY, size = 3.6,
+               stroke = 1, fill = OECD_SURFACE, shape = 21) +
+    geom_text(data = cty, aes(x = -0.03, y = left, label = lab_l,
+                              fontface = ifelse(emph, "bold", "plain")),
+              hjust = 1, size = 2.9, colour = ifelse(cty$emph, OECD_INK, OECD_INK2)) +
+    geom_text(data = cty, aes(x = 1.03, y = right, label = lab_r,
+                              fontface = ifelse(emph, "bold", "plain")),
+              hjust = 0, size = 2.9, colour = ifelse(cty$emph, OECD_INK, OECD_INK2)) +
+    annotate("text", x = 0, y = 0, label = "Rank on heat exposure alone\n(what indicator 9_3 measures)",
+             hjust = 0.5, vjust = 0, size = 3.2, colour = OECD_INK, fontface = "bold", lineheight = 0.95) +
+    annotate("text", x = 1, y = 0, label = "Rank on risk to residents aged 65+\n(hazard × heat island × vulnerability × green space)",
+             hjust = 0.5, vjust = 0, size = 3.2, colour = OECD_INK, fontface = "bold", lineheight = 0.95) +
+    scale_y_reverse(breaks = NULL, expand = expansion(add = c(0.6, 1.6))) +
+    scale_x_continuous(limits = c(-0.42, 1.55), breaks = NULL) +
     labs(
       title = "Exposure is not risk: the same countries, ranked two ways",
-      subtitle = glue("Rank by heat exposure alone (what indicator 9_3 measures) vs rank by risk to older residents. ",
-                      "Spearman rho = {rho}, {n} countries, 2020."),
-      x = "Rank on heat exposure alone (1 = most exposed)",
-      y = "Rank on risk to residents aged 65+ (1 = highest)",
-      caption = "Risk = equal-weight rank score of heat-stress days, summer night urban heat island, share aged 65+, green space per person (inverse).\nSource: OECD CFE functional urban area dataflows via the SDMX API. Cities over 100,000 residents with all layers present."
+      subtitle = glue("Rank 1 = most exposed / most at risk. Highlighted: the {n_highlight} countries whose rank moves most.\n",
+                      "Spearman ρ = {rho} across {n} OECD countries with at least three qualifying cities, 2020."),
+      x = NULL, y = NULL
     ) +
-    fig_theme() +
-    guides(colour = guide_colourbar(barwidth = 12, order = 1), size = guide_legend(order = 2))
-  save_both(p, "fig2_exposure_vs_risk", out_dir, w = 9.5, h = 7.5)
+    oecd_theme() +
+    theme(panel.grid.major = element_blank(), axis.text = element_blank())
+  save_oecd(p, "fig2_exposure_vs_risk",
+            "Source: OECD CFE functional urban area dataflows (heat stress, urban heat island, green area, population by age), SDMX API. Cities > 100,000 residents.",
+            out_dir, w = 9.5, h = 10)
 }
 
-# Label points without a hard dependency on ggrepel.
-ggrepel_or_text <- function(cty) {
-  if (requireNamespace("ggrepel", quietly = TRUE)) {
-    ggrepel::geom_text_repel(aes(label = iso3), size = 3, colour = "grey20",
-                             max.overlaps = 40, seed = 1)
-  } else {
-    geom_text(aes(label = iso3), size = 2.8, colour = "grey20", vjust = -0.9)
-  }
-}
-
-# ── Figure 3: why the number changed ─────────────────────────────────────────
+# ── Figure 3: why the number changed — waterfall (Part-to-whole) ────────────
 
 fig_decomposition <- function(decomp_path = "out/env/decomposition.csv",
                               out_dir = "docs/figures") {
@@ -134,37 +206,38 @@ fig_decomposition <- function(decomp_path = "out/env/decomposition.csv",
   y0 <- d$y0[1]; y1 <- d$y1[1]; hot <- d$hot_days[1]
 
   steps <- tibble(
-    label = c(glue("{y0}"), "Cities got hotter\n(climate, Shapley)",
-              "Populations aged\n(demography, Shapley)", glue("{y1}")),
+    label = c(as.character(y0), "Cities got hotter\n(climate)", "Populations aged\n(demography)", as.character(y1)),
     value = c(v["start"], v["climate (Shapley)"], v["ageing (Shapley)"], v["end"]) / 1e6,
-    kind  = c("level", "change", "change", "level")
+    kind  = c("Level", "Change", "Change", "Level")
   ) %>%
-    mutate(
-      idx = row_number(),
-      end   = cumsum(ifelse(kind == "level" & idx > 1, 0, value)),
-      end   = ifelse(idx == nrow(.), value, end),
-      start = ifelse(kind == "level", 0, lag(end)),
-      mid   = (start + end) / 2,
-      txt   = ifelse(kind == "level", sprintf("%.1f m", value),
-                     sprintf("%+.1f m", value))
-    )
+    mutate(idx = row_number(),
+           end = c(value[1], value[1] + value[2], value[1] + value[2] + value[3], value[4]),
+           start = c(0, value[1], value[1] + value[2], 0),
+           txt = ifelse(kind == "Level", sprintf("%.1f m", value), sprintf("%+.1f m", value)))
 
+  bw <- 0.34   # thin bars: air in the slot, per the mark spec
   p <- ggplot(steps) +
-    geom_rect(aes(xmin = idx - 0.4, xmax = idx + 0.4, ymin = start, ymax = end, fill = kind)) +
-    geom_text(aes(x = idx, y = pmax(start, end), label = txt), vjust = -0.5, size = 3.6,
-              fontface = "bold") +
+    geom_segment(data = steps[1:3, ], aes(x = idx + bw, xend = idx + 1 - bw, y = end, yend = end),
+                 colour = OECD_GREY, linewidth = 0.5) +
+    geom_rect(aes(xmin = idx - bw, xmax = idx + bw, ymin = start, ymax = end, fill = kind)) +
+    geom_text(aes(x = idx, y = pmax(start, end), label = txt), vjust = -0.6, size = 3.6,
+              fontface = "bold", colour = OECD_INK) +
     scale_x_continuous(breaks = steps$idx, labels = steps$label) +
-    scale_fill_manual(values = c(level = "#3B528B", change = "#5DC863"), guide = "none") +
-    scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+    scale_fill_manual(values = c(Level = OECD_PRIMARY, Change = OECD_ACCENT), name = NULL) +
+    scale_y_continuous(expand = expansion(mult = c(0, 0.12)), breaks = seq(0, 100, 25)) +
     labs(
-      title = glue("Older people living in hot cities: {y0} to {y1}"),
-      subtitle = glue("Residents aged 65+ in OECD functional urban areas with more than {hot} days a year of strong heat stress (UTCI >= 32 C).\n",
-                      "Shapley split of the change into climate and demography; the interaction term is shared between them."),
-      x = NULL, y = "Millions of people aged 65+",
-      caption = glue("Balanced panel of {d$n_cities[1]} cities present in both years. Source: OECD CFE DF_HEAT_STRESS and DF_AGE_SEX via the SDMX API.")
+      title = glue("Older people in hot OECD cities, {y0} to {y1}:\nmost of the rise is ageing, not warming"),
+      subtitle = glue("Residents aged 65+ in functional urban areas with more than {hot} days a year of strong heat stress (UTCI ≥ 32 °C), millions.\n",
+                      "Shapley split of the change into climate and demography (interaction shared). Balanced panel of {d$n_cities[1]} cities."),
+      x = NULL, y = "Millions of people aged 65+"
     ) +
-    fig_theme()
-  save_both(p, "fig3_decomposition", out_dir, w = 9, h = 6)
+    oecd_theme() +
+    theme(panel.grid.major.x = element_blank(), legend.position = "top",
+          legend.justification = "left", legend.margin = margin(0, 0, 0, 0),
+          axis.text.x = element_text(colour = OECD_INK, size = 10))
+  save_oecd(p, "fig3_decomposition",
+            "Source: OECD CFE DSD_FUA_CLIM@DF_HEAT_STRESS and DSD_FUA_DEMO@DF_AGE_SEX, retrieved via the SDMX API",
+            out_dir, w = 9, h = 6.2)
 }
 
 fig_all <- function(snapshot_path) {

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='684.00pt' height='540.00pt' viewBox='0 0 684.00 540.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='684.00pt' height='720.00pt' viewBox='0 0 684.00 720.00'>
 <g class='svglite'>
 <defs>
   <style type='text/css'><![CDATA[
@@ -21,145 +21,192 @@
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
 <defs>
-  <clipPath id='cpMC4wMHw2ODQuMDB8MC4wMHw1NDAuMDA='>
-    <rect x='0.00' y='0.00' width='684.00' height='540.00' />
+  <clipPath id='cpMC4wMHw2ODQuMDB8MC4wMHw3MjAuMDA='>
+    <rect x='0.00' y='0.00' width='684.00' height='720.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw1NDAuMDA=)'>
-<rect x='0.00' y='0.00' width='684.00' height='540.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw3MjAuMDA=)'>
+<rect x='0.00' y='0.00' width='684.00' height='720.00' style='stroke-width: 0.75; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMzIuNzh8Njc4LjUyfDM4LjgyfDQzMy4zMA=='>
-    <rect x='32.78' y='38.82' width='645.74' height='394.48' />
+  <clipPath id='cpMC4wMHw2ODQuMDB8MC4wMHw2ODQuMDA='>
+    <rect x='0.00' y='0.00000000000011' width='684.00' height='684.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzIuNzh8Njc4LjUyfDM4LjgyfDQzMy4zMA==)'>
-<polyline points='32.78,51.34 678.52,51.34 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,101.43 678.52,101.43 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,164.05 678.52,164.05 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,226.66 678.52,226.66 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,289.28 678.52,289.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,351.90 678.52,351.90 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='32.78,414.51 678.52,414.51 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='647.77,433.30 647.77,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='565.77,433.30 565.77,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='463.27,433.30 463.27,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='360.78,433.30 360.78,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='258.28,433.30 258.28,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='155.78,433.30 155.78,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='53.28,433.30 53.28,38.82 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<rect x='535.02' y='120.22' width='123.00' height='300.56' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #EBEBEB;' />
-<text x='539.12' y='399.03' style='font-size: 8.54px;fill: #595959; font-family: "Liberation Sans";' textLength='137.20px' lengthAdjust='spacingAndGlyphs'>Top quintile on heat exposure alone,</text>
-<text x='539.12' y='408.25' style='font-size: 8.54px;fill: #595959; font-family: "Liberation Sans";' textLength='53.64px' lengthAdjust='spacingAndGlyphs'>but not on risk</text>
-<line x1='-612.96' y1='821.52' x2='1314.01' y2='-355.67' style='stroke-width: 1.07; stroke: #999999; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
-<circle cx='545.27' cy='51.34' r='12.09' style='stroke-width: 0.71; stroke: #FCCE25; stroke-opacity: 0.90; fill: #FCCE25; fill-opacity: 0.90;' />
-<circle cx='606.77' cy='63.86' r='6.14' style='stroke-width: 0.71; stroke: #F79A42; stroke-opacity: 0.90; fill: #F79A42; fill-opacity: 0.90;' />
-<circle cx='586.27' cy='76.39' r='5.33' style='stroke-width: 0.71; stroke: #E97559; stroke-opacity: 0.90; fill: #E97559; fill-opacity: 0.90;' />
-<circle cx='565.77' cy='88.91' r='3.38' style='stroke-width: 0.71; stroke: #CF4C75; stroke-opacity: 0.90; fill: #CF4C75; fill-opacity: 0.90;' />
-<circle cx='647.77' cy='101.43' r='4.35' style='stroke-width: 0.71; stroke: #BC3987; stroke-opacity: 0.90; fill: #BC3987; fill-opacity: 0.90;' />
-<circle cx='442.77' cy='113.96' r='1.52' style='stroke-width: 0.71; stroke: #92159E; stroke-opacity: 0.90; fill: #92159E; fill-opacity: 0.90;' />
-<circle cx='504.27' cy='126.48' r='2.59' style='stroke-width: 0.71; stroke: #53039F; stroke-opacity: 0.90; fill: #53039F; fill-opacity: 0.90;' />
-<circle cx='627.27' cy='139.00' r='5.47' style='stroke-width: 0.71; stroke: #4B049C; stroke-opacity: 0.90; fill: #4B049C; fill-opacity: 0.90;' />
-<circle cx='381.28' cy='151.53' r='1.01' style='stroke-width: 0.71; stroke: #360692; stroke-opacity: 0.90; fill: #360692; fill-opacity: 0.90;' />
-<circle cx='422.27' cy='164.05' r='1.34' style='stroke-width: 0.71; stroke: #1F078B; stroke-opacity: 0.90; fill: #1F078B; fill-opacity: 0.90;' />
-<circle cx='463.27' cy='176.57' r='0.81' style='stroke-width: 0.71; stroke: #1F078B; stroke-opacity: 0.90; fill: #1F078B; fill-opacity: 0.90;' />
-<circle cx='483.77' cy='189.09' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='524.77' cy='201.62' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='340.28' cy='214.14' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='401.78' cy='226.66' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='237.78' cy='239.19' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='299.28' cy='251.71' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='278.78' cy='264.23' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='176.28' cy='276.76' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='319.78' cy='289.28' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='258.28' cy='301.80' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='217.28' cy='314.33' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='360.78' cy='326.85' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='196.78' cy='339.37' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='135.28' cy='351.90' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='155.78' cy='364.42' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='94.28' cy='376.94' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='114.78' cy='389.47' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='73.78' cy='401.99' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<circle cx='53.28' cy='414.51' r='0.35' style='stroke-width: 0.71; stroke: #0D0887; stroke-opacity: 0.90; fill: #0D0887; fill-opacity: 0.90;' />
-<text x='533.27' y='61.65' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='16.11px' lengthAdjust='spacingAndGlyphs'>JPN</text>
-<text x='618.11' y='59.79' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='12.64px' lengthAdjust='spacingAndGlyphs'>ITA</text>
-<text x='596.62' y='73.16' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>ESP</text>
-<text x='553.42' y='99.39' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.53px' lengthAdjust='spacingAndGlyphs'>TUR</text>
-<text x='660.03' y='96.82' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.48px' lengthAdjust='spacingAndGlyphs'>MEX</text>
-<text x='430.42' y='124.44' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.48px' lengthAdjust='spacingAndGlyphs'>BGR</text>
-<text x='516.40' y='122.01' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.48px' lengthAdjust='spacingAndGlyphs'>KOR</text>
-<text x='639.54' y='134.37' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.53px' lengthAdjust='spacingAndGlyphs'>USA</text>
-<text x='393.61' y='146.92' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='16.91px' lengthAdjust='spacingAndGlyphs'>PRT</text>
-<text x='410.26' y='174.37' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>FRA</text>
-<text x='450.92' y='172.04' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>CHL</text>
-<text x='495.89' y='199.47' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.47px' lengthAdjust='spacingAndGlyphs'>HUN</text>
-<text x='521.39' y='212.14' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.53px' lengthAdjust='spacingAndGlyphs'>AUS</text>
-<text x='327.98' y='224.52' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>AUT</text>
-<text x='413.94' y='222.18' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>CAN</text>
-<text x='225.53' y='249.53' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>NLD</text>
-<text x='311.38' y='247.16' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>DEU</text>
-<text x='266.62' y='274.56' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='16.12px' lengthAdjust='spacingAndGlyphs'>BEL</text>
-<text x='188.28' y='272.40' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='14.84px' lengthAdjust='spacingAndGlyphs'>LVA</text>
-<text x='331.89' y='284.74' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>CHE</text>
-<text x='270.57' y='297.26' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>CZE</text>
-<text x='229.57' y='309.79' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.08px' lengthAdjust='spacingAndGlyphs'>POL</text>
-<text x='372.99' y='322.30' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>SVK</text>
-<text x='184.77' y='349.60' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='15.48px' lengthAdjust='spacingAndGlyphs'>LTU</text>
-<text x='123.07' y='347.29' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>DNK</text>
-<text x='168.07' y='374.88' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.48px' lengthAdjust='spacingAndGlyphs'>GBR</text>
-<text x='81.95' y='372.42' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='19.42px' lengthAdjust='spacingAndGlyphs'>SWE</text>
-<text x='126.96' y='399.89' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='16.12px' lengthAdjust='spacingAndGlyphs'>NZL</text>
-<text x='85.48' y='397.69' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='13.75px' lengthAdjust='spacingAndGlyphs'>FIN</text>
-<text x='45.91' y='424.91' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Liberation Sans";' textLength='18.95px' lengthAdjust='spacingAndGlyphs'>NOR</text>
+<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw2ODQuMDA=)'>
+<rect x='0.00' y='0.00000000000011' width='684.00' height='684.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
-<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw1NDAuMDA=)'>
-<text x='27.85' y='54.37' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='27.85' y='104.46' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>5</text>
-<text x='27.85' y='167.08' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='27.85' y='229.69' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>15</text>
-<text x='27.85' y='292.31' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='27.85' y='354.92' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='27.85' y='417.54' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>30</text>
-<text x='647.77' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='565.77' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>5</text>
-<text x='463.27' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='360.78' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>15</text>
-<text x='258.28' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='155.78' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='53.28' y='444.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>30</text>
-<text x='355.65' y='456.42' text-anchor='middle' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='241.42px' lengthAdjust='spacingAndGlyphs'>Rank on heat exposure alone (1 = most exposed)</text>
-<text transform='translate(13.05,236.06) rotate(-90)' text-anchor='middle' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='234.97px' lengthAdjust='spacingAndGlyphs'>Rank on risk to residents aged 65+ (1 = highest)</text>
-<text x='49.40' y='494.25' style='font-size: 11.00px; font-family: "Liberation Sans";' textLength='150.73px' lengthAdjust='spacingAndGlyphs'>Urban 65+ in top-risk cities (%)</text>
-<image width='172.80' height='17.28' x='205.62' y='475.14' preserveAspectRatio='none' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAABCAYAAABkOJMpAAAAyUlEQVQ4jY2TyxLDIAhFz9VNN/3ufjZdiAZQO11kgPsKmoner491RAc6ogEN0W1U+TzxOAvRzGvgNDmvsoxXnSxoq8ZueMZWvWQN/fSDZKFnaGTunZjRFOeg0aNR1EQ+YDVjmxV3KZk/PDp4qBnNHr3OPbNn13DzsOOs8x6y115B51qu2SHj6I35kXtw4M6JUuO5Mwb/ePK+lDvcMpeu7lXPcPKbf2DH29NnfMeQuT5j46eY7z5w42deO9z8KN8TUb/4zG2ZSTeeL9RmjPD71BhzAAAAAElFTkSuQmCC'/>
-<polyline points='205.90,488.97 205.90,492.42 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='246.27,488.97 246.27,492.42 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='286.64,488.97 286.64,492.42 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='327.00,488.97 327.00,492.42 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='367.37,488.97 367.37,492.42 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='205.90,478.60 205.90,475.14 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='246.27,478.60 246.27,475.14 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='286.64,478.60 286.64,475.14 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='327.00,478.60 327.00,475.14 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<polyline points='367.37,478.60 367.37,475.14 ' style='stroke-width: 0.38; stroke: #FFFFFF; stroke-linecap: butt;' />
-<text x='205.90' y='503.96' text-anchor='middle' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='246.27' y='503.96' text-anchor='middle' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='286.64' y='503.96' text-anchor='middle' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>40</text>
-<text x='327.00' y='503.96' text-anchor='middle' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>60</text>
-<text x='367.37' y='503.96' text-anchor='middle' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>80</text>
-<text x='400.33' y='493.62' style='font-size: 11.00px; font-family: "Liberation Sans";' textLength='103.64px' lengthAdjust='spacingAndGlyphs'>Urban 65+ at risk (m)</text>
-<circle cx='518.09' cy='489.84' r='2.83' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.90; fill: #000000; fill-opacity: 0.90;' />
-<circle cx='551.22' cy='489.84' r='5.89' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.90; fill: #000000; fill-opacity: 0.90;' />
-<circle cx='586.11' cy='489.84' r='8.18' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.90; fill: #000000; fill-opacity: 0.90;' />
-<circle cx='631.94' cy='489.84' r='11.42' style='stroke-width: 0.71; stroke: #000000; stroke-opacity: 0.90; fill: #000000; fill-opacity: 0.90;' />
-<text x='532.21' y='492.87' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='565.34' y='492.87' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>5</text>
-<text x='601.98' y='492.87' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='652.12' y='492.87' style='font-size: 8.80px; font-family: "Liberation Sans";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='5.48' y='31.05' style='font-size: 11.00px;fill: #595959; font-family: "Liberation Sans";' textLength='670.95px' lengthAdjust='spacingAndGlyphs'>Rank by heat exposure alone (what indicator 9_3 measures) vs rank by risk to older residents. Spearman rho = 0.775, 30 countries, 2020.</text>
-<text x='5.48' y='15.11' style='font-size: 14.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='389.66px' lengthAdjust='spacingAndGlyphs'>Exposure is not risk: the same countries, ranked two ways</text>
-<text x='32.78' y='522.94' style='font-size: 9.00px;fill: #737373; font-family: "Liberation Sans";' textLength='540.50px' lengthAdjust='spacingAndGlyphs'>Risk = equal-weight rank score of heat-stress days, summer night urban heat island, share aged 65+, green space per person (inverse).</text>
-<text x='32.78' y='532.66' style='font-size: 9.00px;fill: #737373; font-family: "Liberation Sans";' textLength='494.50px' lengthAdjust='spacingAndGlyphs'>Source: OECD CFE functional urban area dataflows via the SDMX API. Cities over 100,000 residents with all layers present.</text>
+<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw3MjAuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpMTcuOTN8NjY2LjA3fDY2Ljc4fDY3Ni4wMw=='>
+    <rect x='17.93' y='66.78' width='648.13' height='609.25' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTcuOTN8NjY2LjA3fDY2Ljc4fDY3Ni4wMw==)'>
+<rect x='17.93' y='66.78' width='648.13' height='609.25' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<line x1='173.01' y1='153.81' x2='472.11' y2='134.89' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='172.73' x2='472.11' y2='153.81' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='191.65' x2='472.11' y2='172.73' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='115.97' x2='472.11' y2='191.65' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='248.42' x2='472.11' y2='229.50' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='324.10' x2='472.11' y2='286.26' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='286.26' x2='472.11' y2='305.18' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='267.34' x2='472.11' y2='324.10' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='399.78' x2='472.11' y2='361.94' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='343.02' x2='472.11' y2='380.86' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='494.39' x2='472.11' y2='399.78' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='437.63' x2='472.11' y2='418.71' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='456.55' x2='472.11' y2='437.63' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='551.15' x2='472.11' y2='456.55' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='418.71' x2='472.11' y2='475.47' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='475.47' x2='472.11' y2='494.39' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='513.31' x2='472.11' y2='513.31' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='532.23' x2='472.11' y2='551.15' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='588.99' x2='472.11' y2='570.07' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='570.07' x2='472.11' y2='588.99' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='626.84' x2='472.11' y2='607.91' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='607.91' x2='472.11' y2='626.84' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='645.76' x2='472.11' y2='645.76' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='664.68' x2='472.11' y2='664.68' style='stroke-width: 1.49; stroke: #9AA5B4; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<line x1='173.01' y1='210.57' x2='472.11' y2='115.97' style='stroke-width: 4.27; stroke: #245C99;' />
+<line x1='173.01' y1='305.18' x2='472.11' y2='210.57' style='stroke-width: 4.27; stroke: #245C99;' />
+<line x1='173.01' y1='134.89' x2='472.11' y2='248.42' style='stroke-width: 4.27; stroke: #245C99;' />
+<line x1='173.01' y1='361.94' x2='472.11' y2='267.34' style='stroke-width: 4.27; stroke: #245C99;' />
+<line x1='173.01' y1='229.50' x2='472.11' y2='343.02' style='stroke-width: 4.27; stroke: #245C99;' />
+<line x1='173.01' y1='380.86' x2='472.11' y2='532.23' style='stroke-width: 4.27; stroke: #245C99;' />
+<circle cx='173.01' cy='153.81' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='134.89' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='172.73' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='153.81' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='191.65' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='172.73' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='115.97' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='191.65' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='248.42' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='229.50' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='324.10' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='286.26' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='286.26' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='305.18' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='267.34' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='324.10' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='399.78' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='361.94' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='343.02' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='380.86' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='494.39' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='399.78' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='437.63' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='418.71' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='456.55' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='437.63' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='551.15' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='456.55' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='418.71' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='475.47' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='475.47' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='494.39' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='513.31' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='513.31' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='532.23' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='551.15' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='588.99' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='570.07' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='570.07' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='588.99' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='626.84' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='607.91' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='607.91' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='626.84' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='645.76' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='645.76' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='664.68' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='472.11' cy='664.68' r='2.91' style='stroke-width: 1.13; stroke: #9AA5B4; fill: #FFFFFF;' />
+<circle cx='173.01' cy='210.57' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='472.11' cy='115.97' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='173.01' cy='305.18' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='472.11' cy='210.57' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='173.01' cy='134.89' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='472.11' cy='248.42' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='173.01' cy='361.94' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='472.11' cy='267.34' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='173.01' cy='229.50' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='472.11' cy='343.02' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='173.01' cy='380.86' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<circle cx='472.11' cy='532.23' r='4.55' style='stroke-width: 1.42; stroke: #245C99; fill: #FFFFFF;' />
+<text x='164.04' y='213.53' text-anchor='end' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='25.23px' lengthAdjust='spacingAndGlyphs'>JPN  6</text>
+<text x='164.04' y='156.77' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='20.97px' lengthAdjust='spacingAndGlyphs'>ITA  3</text>
+<text x='164.04' y='175.69' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='25.53px' lengthAdjust='spacingAndGlyphs'>ESP  4</text>
+<text x='164.04' y='194.61' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='26.14px' lengthAdjust='spacingAndGlyphs'>TUR  5</text>
+<text x='164.04' y='118.93' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.06px' lengthAdjust='spacingAndGlyphs'>MEX  1</text>
+<text x='164.04' y='308.13' text-anchor='end' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.66px' lengthAdjust='spacingAndGlyphs'>BGR  11</text>
+<text x='164.04' y='251.37' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.06px' lengthAdjust='spacingAndGlyphs'>KOR  8</text>
+<text x='164.04' y='137.85' text-anchor='end' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='26.28px' lengthAdjust='spacingAndGlyphs'>USA  2</text>
+<text x='164.04' y='364.90' text-anchor='end' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='30.28px' lengthAdjust='spacingAndGlyphs'>PRT  14</text>
+<text x='164.04' y='327.06' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.83px' lengthAdjust='spacingAndGlyphs'>FRA  12</text>
+<text x='164.04' y='289.21' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.97px' lengthAdjust='spacingAndGlyphs'>CHL  10</text>
+<text x='164.04' y='270.29' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.05px' lengthAdjust='spacingAndGlyphs'>HUN  9</text>
+<text x='164.04' y='232.45' text-anchor='end' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='26.59px' lengthAdjust='spacingAndGlyphs'>AUS  7</text>
+<text x='164.04' y='402.74' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.12px' lengthAdjust='spacingAndGlyphs'>AUT  16</text>
+<text x='164.04' y='345.98' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>CAN  13</text>
+<text x='164.04' y='497.34' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.28px' lengthAdjust='spacingAndGlyphs'>NLD  21</text>
+<text x='164.04' y='440.58' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>DEU  18</text>
+<text x='164.04' y='459.50' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.06px' lengthAdjust='spacingAndGlyphs'>BEL  19</text>
+<text x='164.04' y='554.11' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.70px' lengthAdjust='spacingAndGlyphs'>LVA  24</text>
+<text x='164.04' y='421.66' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>CHE  17</text>
+<text x='164.04' y='478.42' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.28px' lengthAdjust='spacingAndGlyphs'>CZE  20</text>
+<text x='164.04' y='516.27' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.98px' lengthAdjust='spacingAndGlyphs'>POL  22</text>
+<text x='164.04' y='383.82' text-anchor='end' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='30.73px' lengthAdjust='spacingAndGlyphs'>SVK  15</text>
+<text x='164.04' y='535.19' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='28.77px' lengthAdjust='spacingAndGlyphs'>LTU  23</text>
+<text x='164.04' y='591.95' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>DNK  26</text>
+<text x='164.04' y='573.03' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.66px' lengthAdjust='spacingAndGlyphs'>GBR  25</text>
+<text x='164.04' y='629.79' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='32.56px' lengthAdjust='spacingAndGlyphs'>SWE  28</text>
+<text x='164.04' y='610.87' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.06px' lengthAdjust='spacingAndGlyphs'>NZL  27</text>
+<text x='164.04' y='648.71' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.08px' lengthAdjust='spacingAndGlyphs'>FIN  29</text>
+<text x='164.04' y='667.63' text-anchor='end' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='32.11px' lengthAdjust='spacingAndGlyphs'>NOR  30</text>
+<text x='481.08' y='118.93' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='44.97px' lengthAdjust='spacingAndGlyphs'>1  JPN   (-5)</text>
+<text x='481.08' y='137.85' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='21.42px' lengthAdjust='spacingAndGlyphs'>2  ITA</text>
+<text x='481.08' y='156.77' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='25.69px' lengthAdjust='spacingAndGlyphs'>3  ESP</text>
+<text x='481.08' y='175.69' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='25.98px' lengthAdjust='spacingAndGlyphs'>4  TUR</text>
+<text x='481.08' y='194.61' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.06px' lengthAdjust='spacingAndGlyphs'>5  MEX</text>
+<text x='481.08' y='213.53' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='47.25px' lengthAdjust='spacingAndGlyphs'>6  BGR   (-5)</text>
+<text x='481.08' y='232.45' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.06px' lengthAdjust='spacingAndGlyphs'>7  KOR</text>
+<text x='481.08' y='251.37' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='48.08px' lengthAdjust='spacingAndGlyphs'>8  USA   (+6)</text>
+<text x='481.08' y='270.29' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='45.42px' lengthAdjust='spacingAndGlyphs'>9  PRT   (-5)</text>
+<text x='481.08' y='289.21' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.28px' lengthAdjust='spacingAndGlyphs'>10  FRA</text>
+<text x='481.08' y='308.13' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.67px' lengthAdjust='spacingAndGlyphs'>11  CHL</text>
+<text x='481.08' y='327.06' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.64px' lengthAdjust='spacingAndGlyphs'>12  HUN</text>
+<text x='481.08' y='345.98' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='52.67px' lengthAdjust='spacingAndGlyphs'>13  AUS   (+6)</text>
+<text x='481.08' y='364.90' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.83px' lengthAdjust='spacingAndGlyphs'>14  AUT</text>
+<text x='481.08' y='383.82' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>15  CAN</text>
+<text x='481.08' y='402.74' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.28px' lengthAdjust='spacingAndGlyphs'>16  NLD</text>
+<text x='481.08' y='421.66' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>17  DEU</text>
+<text x='481.08' y='440.58' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.38px' lengthAdjust='spacingAndGlyphs'>18  BEL</text>
+<text x='481.08' y='459.50' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='28.16px' lengthAdjust='spacingAndGlyphs'>19  LVA</text>
+<text x='481.08' y='478.42' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>20  CHE</text>
+<text x='481.08' y='497.34' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.28px' lengthAdjust='spacingAndGlyphs'>21  CZE</text>
+<text x='481.08' y='516.27' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='30.30px' lengthAdjust='spacingAndGlyphs'>22  POL</text>
+<text x='481.08' y='535.19' style='font-size: 8.25px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='52.53px' lengthAdjust='spacingAndGlyphs'>23  SVK   (+8)</text>
+<text x='481.08' y='554.11' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='28.77px' lengthAdjust='spacingAndGlyphs'>24  LTU</text>
+<text x='481.08' y='573.03' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>25  DNK</text>
+<text x='481.08' y='591.95' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='31.66px' lengthAdjust='spacingAndGlyphs'>26  GBR</text>
+<text x='481.08' y='610.87' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='32.56px' lengthAdjust='spacingAndGlyphs'>27  SWE</text>
+<text x='481.08' y='629.79' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='29.38px' lengthAdjust='spacingAndGlyphs'>28  NZL</text>
+<text x='481.08' y='648.71' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='27.08px' lengthAdjust='spacingAndGlyphs'>29  FIN</text>
+<text x='481.08' y='667.63' style='font-size: 8.25px;fill: #4A5568; font-family: "Arial";' textLength='32.11px' lengthAdjust='spacingAndGlyphs'>30  NOR</text>
+<text x='173.01' y='86.67' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='126.47px' lengthAdjust='spacingAndGlyphs'>Rank on heat exposure alone</text>
+<text x='173.01' y='97.05' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='130.50px' lengthAdjust='spacingAndGlyphs'>(what indicator 9_3 measures)</text>
+<text x='472.11' y='86.67' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='150.50px' lengthAdjust='spacingAndGlyphs'>Rank on risk to residents aged 65+</text>
+<text x='472.11' y='97.05' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='220.83px' lengthAdjust='spacingAndGlyphs'>(hazard × heat island × vulnerability × green space)</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw3MjAuMDA=)'>
+<text x='17.93' y='40.63' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='445.70px' lengthAdjust='spacingAndGlyphs'>Rank 1 = most exposed / most at risk. Highlighted: the 6 countries whose rank moves most.</text>
+<text x='17.93' y='54.49' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='434.27px' lengthAdjust='spacingAndGlyphs'>Spearman ρ = 0.775 across 30 OECD countries with at least three qualifying cities, 2020.</text>
+<text x='17.93' y='25.40' style='font-size: 16.00px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='445.88px' lengthAdjust='spacingAndGlyphs'>Exposure is not risk: the same countries, ranked two ways</text>
+<rect x='0.00' y='684.00' width='684.00' height='36.00' style='stroke-width: 0.75; stroke: none; fill: #0D2240;' />
+<text x='12.96' y='699.46' style='font-size: 9.00px; font-weight: bold;fill: #FFFFFF; font-family: "Arial";' textLength='144.31px' lengthAdjust='spacingAndGlyphs'>How's Life? refresh &amp; QA pipeline</text>
+<text x='12.96' y='712.64' style='font-size: 7.60px;fill: #C9D6E6; font-family: "Arial";' textLength='521.23px' lengthAdjust='spacingAndGlyphs'>Source: OECD CFE functional urban area dataflows (heat stress, urban heat island, green area, population by age), SDMX API. Cities &gt; 100,000 residents.</text>
 </g>
 </g>
 </svg>
