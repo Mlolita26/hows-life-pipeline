@@ -292,45 +292,114 @@ env_hsl_rows <- function(country) {
 #' f(P, H) = sum over cities of pop65 x [hot]. Two orderings of the
 #' counterfactual are reported, plus their Shapley average, so the split does
 #' not depend on which factor you happen to change first.
-env_decompose <- function(dir = "data/raw/fua", y0 = 2010, y1 = 2020,
-                          hot_days = 30, heat_threshold = "GE32") {
-  h <- fua_read("DF_HEAT_STRESS", dir) %>%
+#' Heat exposure averaged over a window of years centred on `year`.
+#'
+#' Single-year heat is noisy: 2010 was a hot year across the OECD (53 pop-
+#' weighted days against 45-47 in 2008-09), which biased a 2010-vs-2020 split
+#' towards demography. A centred five-year mean (half_window = 2) is the
+#' default baseline; half_window = 0 reproduces single-year values.
+env_heat_window <- function(dir, year, half_window = 2, heat_threshold = "GE32") {
+  yrs <- as.character((year - half_window):(year + half_window))
+  fua_read("DF_HEAT_STRESS", dir) %>%
     filter(MEASURE == "UTCI_POP_EXP", HEAT_STRESS == heat_threshold,
-           TIME_PERIOD %in% c(y0, y1)) %>%
+           TIME_PERIOD %in% yrs) %>%
     fua_only() %>%
-    transmute(fua = REF_AREA, year = as.integer(TIME_PERIOD),
-              hot = as.numeric(as.numeric(OBS_VALUE) > hot_days))
+    transmute(fua = REF_AREA, days = as.numeric(OBS_VALUE)) %>%
+    filter(!is.na(days)) %>%
+    group_by(fua) %>%
+    summarise(days = mean(days), n_years = n(), .groups = "drop") %>%
+    filter(n_years == length(yrs)) %>%
+    select(fua, days)
+}
+
+#' The balanced panel behind the decomposition: pop65 and windowed heat at both years.
+env_decomp_panel <- function(dir = "data/raw/fua", y0 = 2010, y1 = 2020,
+                             half_window = 2, heat_threshold = "GE32") {
   a <- fua_read("DF_AGE_SEX", dir) %>%
     filter(MEASURE == "POP", SEX == "_T", AGE == "Y_GE65",
            TIME_PERIOD %in% c(y0, y1)) %>%
     fua_only() %>%
     transmute(fua = REF_AREA, year = as.integer(TIME_PERIOD),
-              pop65 = as.numeric(OBS_VALUE))
-  w <- inner_join(h, a, by = c("fua", "year")) %>%
-    filter(!is.na(pop65), !is.na(hot)) %>%
-    pivot_wider(names_from = year, values_from = c(pop65, hot), values_fn = first) %>%
-    drop_na()
+              pop65 = as.numeric(OBS_VALUE)) %>%
+    filter(!is.na(pop65)) %>%
+    pivot_wider(names_from = year, values_from = pop65, names_prefix = "pop65_", values_fn = first)
+  h0 <- env_heat_window(dir, y0, half_window, heat_threshold) %>% rename(days_0 = days)
+  h1 <- env_heat_window(dir, y1, half_window, heat_threshold) %>% rename(days_1 = days)
+  a %>% inner_join(h0, by = "fua") %>% inner_join(h1, by = "fua") %>% drop_na()
+}
 
+# Two-factor Shapley split of f(P, H) = sum(P * H) between P (people) and H (heat).
+shapley2 <- function(P0, P1, H0, H1) {
   f <- function(P, H) sum(P * H)
-  P0 <- w[[glue("pop65_{y0}")]]; P1 <- w[[glue("pop65_{y1}")]]
-  H0 <- w[[glue("hot_{y0}")]];   H1 <- w[[glue("hot_{y1}")]]
-
   base <- f(P0, H0); final <- f(P1, H1)
   clim_first <- c(climate = f(P0, H1) - base, ageing = final - f(P0, H1))
   age_first  <- c(ageing  = f(P1, H0) - base, climate = final - f(P1, H0))
-  shapley <- c(climate = mean(c(clim_first["climate"], age_first["climate"])),
-               ageing  = mean(c(clim_first["ageing"],  age_first["ageing"])))
-  interaction <- final - f(P0, H1) - f(P1, H0) + base
+  list(
+    base = base, final = final, clim_first = clim_first, age_first = age_first,
+    shapley = c(climate = unname(mean(c(clim_first["climate"], age_first["climate"]))),
+                ageing  = unname(mean(c(clim_first["ageing"],  age_first["ageing"])))),
+    interaction = unname(final - f(P0, H1) - f(P1, H0) + base)
+  )
+}
 
+#' Why did the number of older people in hot cities change between two years?
+#'
+#' f(P, H) = sum over cities of pop65 x [hot]. Two orderings of the
+#' counterfactual are reported, plus their Shapley average, so the split does
+#' not depend on which factor you happen to change first. Heat is a centred
+#' five-year mean by default (see env_heat_window).
+env_decompose <- function(dir = "data/raw/fua", y0 = 2010, y1 = 2020,
+                          hot_days = 30, heat_threshold = "GE32", half_window = 2) {
+  w <- env_decomp_panel(dir, y0, y1, half_window, heat_threshold)
+  P0 <- w[[glue("pop65_{y0}")]]; P1 <- w[[glue("pop65_{y1}")]]
+  s <- shapley2(P0, P1, as.numeric(w$days_0 > hot_days), as.numeric(w$days_1 > hot_days))
   tibble(
     term  = c("start", "climate (climate-first order)", "ageing (climate-first order)",
               "ageing (ageing-first order)", "climate (ageing-first order)",
               "climate (Shapley)", "ageing (Shapley)", "interaction", "end"),
-    value = c(base, clim_first["climate"], clim_first["ageing"],
-              age_first["ageing"], age_first["climate"],
-              shapley["climate"], shapley["ageing"], interaction, final),
-    n_cities = nrow(w), y0 = y0, y1 = y1, hot_days = hot_days
+    value = c(s$base, s$clim_first["climate"], s$clim_first["ageing"],
+              s$age_first["ageing"], s$age_first["climate"],
+              s$shapley["climate"], s$shapley["ageing"], s$interaction, s$final),
+    n_cities = nrow(w), y0 = y0, y1 = y1, hot_days = hot_days, half_window = half_window
   )
+}
+
+#' Does the climate/ageing split survive other reasonable choices?
+#'
+#' A binary threshold only registers cities that cross it - a city already hot
+#' in y0 that got hotter adds nothing to the climate term. The person-days
+#' metric (pop65 x days) captures that intensification. Both are reported, at
+#' several thresholds, with single-year and windowed heat, so the reader sees
+#' the range rather than one number.
+env_decompose_sensitivity <- function(dir = "data/raw/fua", y0 = 2010, y1 = 2020,
+                                      thresholds = c(10, 20, 30, 45, 60),
+                                      heat_threshold = "GE32") {
+  rows <- list()
+  for (hw in c(0, 2)) {
+    w <- env_decomp_panel(dir, y0, y1, hw, heat_threshold)
+    P0 <- w[[glue("pop65_{y0}")]]; P1 <- w[[glue("pop65_{y1}")]]
+    lab <- if (hw == 0) "single year" else glue("{2*hw+1}-year mean")
+    for (t in thresholds) {
+      s <- shapley2(P0, P1, as.numeric(w$days_0 > t), as.numeric(w$days_1 > t))
+      rows[[length(rows) + 1]] <- tibble(
+        metric = glue("people 65+ in cities above {t} heat days"), heat_basis = lab,
+        threshold = t, start = s$base, end = s$final,
+        climate = unname(s$shapley["climate"]), ageing = unname(s$shapley["ageing"]),
+        climate_share = unname(s$shapley["climate"]) / (s$final - s$base), n_cities = nrow(w))
+    }
+    s <- shapley2(P0, P1, w$days_0, w$days_1)
+    rows[[length(rows) + 1]] <- tibble(
+      metric = "person-days of heat stress, residents 65+", heat_basis = lab,
+      threshold = NA_real_, start = s$base, end = s$final,
+      climate = unname(s$shapley["climate"]), ageing = unname(s$shapley["ageing"]),
+      climate_share = unname(s$shapley["climate"]) / (s$final - s$base), n_cities = nrow(w))
+    rows[[length(rows) + 1]] <- tibble(
+      metric = "context: total residents 65+ / pop65-weighted heat days", heat_basis = lab,
+      threshold = NA_real_, start = sum(P0), end = sum(P1),
+      climate = weighted.mean(w$days_0, P0), ageing = weighted.mean(w$days_1, P1),
+      climate_share = NA_real_, n_cities = nrow(w))
+  }
+  bind_rows(rows) %>% mutate(across(c(climate_share), ~ round(.x, 3)))
 }
 
 # ── Orchestrator ─────────────────────────────────────────────────────────────
@@ -348,6 +417,7 @@ env_run <- function(year = 2020, dir = "data/raw/fua", out = "out/env",
   weights <- env_weight_sensitivity(city)
   hsl     <- env_hsl_rows(country)
   decomp  <- env_decompose(dir)
+  dsens   <- env_decompose_sensitivity(dir)
 
   cli_alert_info("{nrow(scored)} cities, {n_distinct(scored$iso3)} countries with all layers")
   cli_alert_info("Spearman rho (exposure-only vs risk-based country ranking): {test$spearman_rho}")
@@ -363,8 +433,11 @@ env_run <- function(year = 2020, dir = "data/raw/fua", out = "out/env",
   write_csv(weights, file.path(out, "weight_sensitivity.csv"))
   write_csv(hsl,     file.path(out, "hsl_schema_rows.csv"))
   write_csv(decomp,  file.path(out, "decomposition.csv"))
+  write_csv(dsens,   file.path(out, "decomposition_sensitivity.csv"))
+  cs <- dsens %>% filter(!grepl("^context", metric)) %>% pull(climate_share)
+  cli_alert_info("Climate share of the change: {round(100*min(cs))}-{round(100*max(cs))}% across {length(cs)} specifications")
   cli_alert_success("Wrote {.path {out}}")
 
   invisible(list(city = scored, country = country, test = test, layers = layers,
-                 weights = weights, hsl = hsl, decomp = decomp))
+                 weights = weights, hsl = hsl, decomp = decomp, dsens = dsens))
 }

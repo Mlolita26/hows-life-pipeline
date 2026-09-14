@@ -77,6 +77,11 @@ build_site <- function(out_dir = "docs", data_dir = "out", raw_dir = "data/raw",
   lay   <- read_csv(file.path(data_dir, "env", "layer_sensitivity.csv"), show_col_types = FALSE)
   wts   <- read_csv(file.path(data_dir, "env", "weight_sensitivity.csv"), show_col_types = FALSE)
   dec   <- read_csv(file.path(data_dir, "env", "decomposition.csv"), show_col_types = FALSE)
+  dsens <- read_csv(file.path(data_dir, "env", "decomposition_sensitivity.csv"), show_col_types = FALSE)
+  cs    <- dsens %>% filter(!grepl("^context", metric))
+  cs_lo <- round(100 * min(cs$climate_share)); cs_hi <- round(100 * max(cs$climate_share))
+  ctx   <- dsens %>% filter(grepl("^context", metric), grepl("mean", heat_basis))
+  pop_growth <- round(100 * (ctx$end / ctx$start - 1)); heat_growth <- round(100 * (ctx$ageing / ctx$climate - 1))
   city  <- read_csv(file.path(data_dir, "env", "city_layers_scored.csv"), show_col_types = FALSE)
   hsl   <- read_csv(file.path(data_dir, "env", "hsl_schema_rows.csv"), show_col_types = FALSE)
 
@@ -252,10 +257,19 @@ build_site <- function(out_dir = "docs", data_dir = "out", raw_dir = "data/raw",
   figure("fig3_decomposition",
          "Waterfall chart: older residents in hot cities in 2010, the increase attributed to cities getting hotter, the increase attributed to populations ageing, and the 2020 total.",
          "Graphique en cascade : aînés dans des villes chaudes en 2010, hausse due au réchauffement des villes, hausse due au vieillissement, total 2020.",
-         glue("Figure 3. Residents aged 65+ in OECD cities with more than {dec$hot_days[1]} days a year of strong heat stress rose from {fmt(v['start']/1e6,1)} to {fmt(v['end']/1e6,1)} million between {dec$y0[1]} and {dec$y1[1]} (+{round(100*(v['end']-v['start'])/v['start'])}%). Shapley decomposition: ageing +{fmt(v['ageing (Shapley)']/1e6,1)} m, warming +{fmt(v['climate (Shapley)']/1e6,1)} m. Two of the four transitions named in WISE\'s mission, pulling the same way."),
+         glue("Figure 3. Residents aged 65+ in OECD cities with more than {dec$hot_days[1]} days a year of strong heat stress rose from {fmt(v['start']/1e6,1)} to {fmt(v['end']/1e6,1)} million between {dec$y0[1]} and {dec$y1[1]} (+{round(100*(v['end']-v['start'])/v['start'])}%). Shapley decomposition: ageing +{fmt(v['ageing (Shapley)']/1e6,1)} m, warming +{fmt(v['climate (Shapley)']/1e6,1)} m. Roughly a quarter climate, three-quarters demography; heat averaged over five years around each date. Two of the four transitions named in WISE\'s mission, pulling the same way."),
          glue("Figure 3. Les 65 ans et plus dans les villes chaudes de l\'OCDE sont passés de {fmt(v['start']/1e6,1)} à {fmt(v['end']/1e6,1)} millions entre {dec$y0[1]} et {dec$y1[1]}. Décomposition de Shapley : vieillissement +{fmt(v['ageing (Shapley)']/1e6,1)} M, réchauffement +{fmt(v['climate (Shapley)']/1e6,1)} M.")),
   html_table(decomp_tbl, "Both counterfactual orderings are in the data file; the Shapley values are their average and sum exactly to the change.",
              "Les deux ordres contrefactuels sont dans le fichier ; les valeurs de Shapley en sont la moyenne et somment exactement au changement.", 2),
+
+'<h3>', bi("Does the split survive other choices? Challenged - and largely yes", "Le partage resiste-t-il a d\'autres choix ? Mis a l\'epreuve - et largement oui"), '</h3>
+<p>', bi(glue("A binary threshold only counts cities that <em>cross</em> it: a city already hot in {dec$y0[1]} that got hotter adds nothing to the climate term. And a single-year baseline is noisy - {dec$y0[1]} was a hot year. So the split was re-run across thresholds from 10 to 60 days, with single-year and five-year-mean heat, and on a continuous measure - person-days of heat for the 65+ - which does see intensification. <strong>Climate\'s share ranges from {cs_lo}% to {cs_hi}%; demography is the larger driver in every specification.</strong> Over the decade the urban population aged 65+ grew {pop_growth}% while population-weighted heat-stress days grew {heat_growth}%. This is a statement about {dec$y0[1]}-{dec$y1[1]}, the decade the baby-boom cohort crossed 65; as ageing slows and warming accelerates, the balance should shift. Demography here also includes older people moving to hot places."),
+         glue("Un seuil binaire ne compte que les villes qui le <em>franchissent</em>. Le partage a donc ete recalcule pour des seuils de 10 a 60 jours, avec une chaleur annuelle ou moyennee sur cinq ans, et sur une mesure continue (personnes-jours de chaleur des 65 ans et plus). <strong>La part du climat va de {cs_lo} % a {cs_hi} % ; la demographie domine dans toutes les specifications.</strong> Sur la decennie, la population urbaine de 65 ans et plus a cru de {pop_growth} % et les jours de stress thermique de {heat_growth} %.")), '</p>',
+  html_table(cs %>% transmute(Metric = metric, `Heat basis` = heat_basis, `Start` = start / 1e6, `End` = end / 1e6,
+                              `Climate` = climate / 1e6, `Ageing` = ageing / 1e6, `Climate share (%)` = 100 * climate_share) %>%
+               mutate(across(where(is.numeric), ~ round(.x, 1))),
+             "Sensitivity of the climate / ageing split. Headcount rows in millions of people; person-days rows in billions of person-days.",
+             "Sensibilite du partage climat / vieillissement. Effectifs en millions ; personnes-jours en milliards.", 1),
 '</section>
 
 <section aria-labelledby="s4"><h2 id="s4">', bi("4. Method, provenance and limits", "4. Méthode, provenance et limites"), '</h2>

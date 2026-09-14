@@ -1,10 +1,10 @@
-term,value,n_cities,y0,y1,hot_days
-start,60305779,1022,2010,2020,30
-climate (climate-first order),5009214,1022,2010,2020,30
-ageing (climate-first order),21066689,1022,2010,2020,30
-ageing (ageing-first order),19423853,1022,2010,2020,30
-climate (ageing-first order),6652050,1022,2010,2020,30
-climate (Shapley),5830632,1022,2010,2020,30
-ageing (Shapley),20245271,1022,2010,2020,30
-interaction,1642836,1022,2010,2020,30
-end,86381682,1022,2010,2020,30
+term,value,n_cities,y0,y1,hot_days,half_window
+start,60132645,1022,2010,2020,30,2
+climate (climate-first order),5133163,1022,2010,2020,30,2
+ageing (climate-first order),20792158,1022,2010,2020,30,2
+ageing (ageing-first order),19489864,1022,2010,2020,30,2
+climate (ageing-first order),6435457,1022,2010,2020,30,2
+climate (Shapley),5784310,1022,2010,2020,30,2
+ageing (Shapley),20141011,1022,2010,2020,30,2
+interaction,1302294,1022,2010,2020,30,2
+end,86057966,1022,2010,2020,30,2

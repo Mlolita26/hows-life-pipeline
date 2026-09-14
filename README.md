@@ -88,9 +88,19 @@ a method, not a proposed official statistic.
 
 Residents aged 65+ in OECD cities with more than 30 days/year of strong heat
 stress: **60.3 → 86.4 million, 2010 to 2020 (+43%)**, on a balanced panel of
-1,022 cities. Shapley decomposition: **ageing +20.3 m, warming +5.8 m**, both
-orderings reported. Two of the four transitions in WISE's mission, pulling the
-same way.
+1,022 cities, with heat averaged over five years around each date (2010 alone
+was a hot year). Shapley decomposition: **ageing +20.2 m, warming +5.8 m** —
+roughly a quarter climate, three-quarters demography, both orderings reported.
+
+That split was challenged and stress-tested: a binary threshold only counts
+cities that *cross* it, so the decomposition was re-run at thresholds from 10 to
+60 days, with single-year and five-year heat, and on **person-days of heat for
+the 65+** (which does see already-hot cities getting hotter). **Climate's share
+ranges 10–35%; demography is the larger driver in every specification** — because
+the urban 65+ population grew 29% in the decade while heat days grew ~17%. It is
+a statement about 2010–2020, the decade the baby-boom cohort crossed 65; the
+balance should shift as ageing slows and warming accelerates.
+`out/env/decomposition_sensitivity.csv` has the table.
 
 ---
 

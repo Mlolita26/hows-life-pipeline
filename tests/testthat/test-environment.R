@@ -85,10 +85,40 @@ test_that("the decomposition identity holds: start + climate + ageing + interact
   readr::write_csv(heat, file.path(d, "DF_HEAT_STRESS.csv"))
   readr::write_csv(demo, file.path(d, "DF_AGE_SEX.csv"))
 
-  dc <- env_decompose(dir = d, y0 = 2010, y1 = 2020, hot_days = 30)
+  dc <- env_decompose(dir = d, y0 = 2010, y1 = 2020, hot_days = 30, half_window = 0)
   v  <- setNames(dc$value, dc$term)
   expect_equal(unname(v["start"] + v["climate (Shapley)"] + v["ageing (Shapley)"]),
                unname(v["end"]))
   # City 1 crosses the threshold (20 -> 40): climate effect is positive.
   expect_gt(unname(v["climate (Shapley)"]), 0)
+
+  # Sensitivity table: the two metrics answer different questions and give
+  # different splits. Hand-computed for this fixture:
+  #   threshold  f = pop65 x [days > 30]: base 2000, end 4100,
+  #              Shapley climate mean(1000, 1500) = 1250 -> share 1250/2100 = 0.595
+  #   person-days f = pop65 x days: base 120000, end 216000,
+  #              Shapley climate mean(40000, 56000) = 48000 -> share 0.5
+  s <- env_decompose_sensitivity(dir = d, y0 = 2010, y1 = 2020, thresholds = 30)
+  thr <- s[s$metric == "people 65+ in cities above 30 heat days" & s$heat_basis == "single year", ]
+  pd  <- s[grepl("^person-days", s$metric) & s$heat_basis == "single year", ]
+  expect_equal(thr$climate_share, 0.595)
+  expect_equal(pd$climate_share, 0.5)
+  expect_equal(pd$start, 120000); expect_equal(pd$end, 216000)
+  # Both bases (single year and windowed) are present, plus a context row each.
+  expect_setequal(unique(s$heat_basis), c("single year", "5-year mean"))
+  expect_equal(sum(grepl("^context", s$metric)), 2)
+})
+
+test_that("a centred heat window averages the requested years only", {
+  d <- tempfile(); dir.create(d)
+  heat <- tibble::tibble(
+    STRUCTURE = "x", REF_AREA = "AAA01F", `Reference area` = "c", MEASURE = "UTCI_POP_EXP",
+    HEAT_STRESS = "GE32", TERRITORIAL_LEVEL = "FUA",
+    TIME_PERIOD = as.character(2008:2012), OBS_VALUE = c("10", "20", "60", "20", "10")
+  )
+  readr::write_csv(heat, file.path(d, "DF_HEAT_STRESS.csv"))
+  expect_equal(env_heat_window(d, 2010, half_window = 2)$days, 24)
+  expect_equal(env_heat_window(d, 2010, half_window = 0)$days, 60)
+  # An incomplete window is dropped rather than averaged over fewer years.
+  expect_equal(nrow(env_heat_window(d, 2011, half_window = 2)), 0)
 })

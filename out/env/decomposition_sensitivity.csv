@@ -1,0 +1,15 @@
+metric,heat_basis,threshold,start,end,climate,ageing,climate_share,n_cities
+people 65+ in cities above 10 heat days,single year,10,89965159,120995616,4004154.5,27026302.5,0.129,1022
+people 65+ in cities above 20 heat days,single year,20,68177157,96797864,6036773,22583934,0.211,1022
+people 65+ in cities above 30 heat days,single year,30,60305779,86381682,5830632,20245271,0.224,1022
+people 65+ in cities above 45 heat days,single year,45,51817653,73365772,4020976,17527143,0.187,1022
+people 65+ in cities above 60 heat days,single year,60,41468240,57506157,1681732.5,14356184.5,0.105,1022
+"person-days of heat stress, residents 65+",single year,NA,5587284486.638206,7866552377.347808,298965925.9092865,1980301964.8003159,0.131,1022
+context: total residents 65+ / pop65-weighted heat days,single year,NA,110158231,142060057,50.72053568687215,55.37483613249436,NA,1022
+people 65+ in cities above 10 heat days,5-year mean,10,81476285,121640877,13860989.5,26303602.5,0.345,1022
+people 65+ in cities above 20 heat days,5-year mean,20,65968882,100259650,11977832,22312936,0.349,1022
+people 65+ in cities above 30 heat days,5-year mean,30,60132645,86057966,5784310,20141011,0.223,1022
+people 65+ in cities above 45 heat days,5-year mean,45,48199756,69552608,4964469,16388383,0.232,1022
+people 65+ in cities above 60 heat days,5-year mean,60,41260879,59187181,3598649.5,14327652.5,0.201,1022
+"person-days of heat stress, residents 65+",5-year mean,NA,5234496160.351564,7912792244.712526,748254198.2032962,1930041886.1576657,0.279,1022
+context: total residents 65+ / pop65-weighted heat days,5-year mean,NA,110158231,142060057,47.517975850134746,55.70033133741828,NA,1022
