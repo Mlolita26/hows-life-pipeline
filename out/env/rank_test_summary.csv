@@ -1,0 +1,5 @@
+metric,value
+n_countries,30
+spearman_rho,0.775
+top_quintile_size,6
+misplaced_share65_pct,3.1

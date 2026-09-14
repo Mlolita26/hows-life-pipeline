@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+renv/library/
+renv/staging/
+
+# How's Life? snapshots ARE committed: the vintage diff depends on having the
+# previous one, and the database is public. The city-level CFE inputs are not
+# committed - they are large (up to ~200 MB each) and are re-fetched from the
+# SDMX API by R/04_fetch_fua.R. Their manifest is kept.
+data/raw/fua/*.csv
+!data/raw/fua/manifest.csv

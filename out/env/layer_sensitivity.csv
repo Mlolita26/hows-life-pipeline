@@ -1,0 +1,6 @@
+step,components,rho_vs_final,rho_vs_previous
+hazard only,1,0.94,NA
++ night heat island,2,0.948,0.932
++ share aged 65+,3,0.92,0.896
++ green space,4,0.983,0.937
++ cooling degree days,5,1,0.983

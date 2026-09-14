@@ -1,0 +1,29 @@
+Package: howslifepipeline
+Type: Project
+Title: Automated Refresh, QA and Environmental Well-being Analysis for the OECD How's Life? Database
+Version: 0.2.0
+Authors@R: person("Lolita", "Muller", role = c("aut", "cre"), email = "lolita.muller26@gmail.com")
+Description: Fetches the OECD How's Life? well-being database and the OECD
+    city-level climate, environment and demographic dataflows from the SDMX API,
+    validates them, tracks changes between vintages, and builds a risk-based
+    environmental well-being indicator with an explicit hazard / exposure /
+    vulnerability / adaptive-capacity structure.
+License: MIT
+Encoding: UTF-8
+Imports:
+    dplyr,
+    readr,
+    tidyr,
+    purrr,
+    tibble,
+    glue,
+    cli,
+    openssl,
+    jsonlite,
+    ggplot2,
+    viridisLite,
+    scales,
+    ragg,
+    svglite
+Suggests:
+    testthat (>= 3.0.0)

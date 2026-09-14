@@ -1,0 +1,71 @@
+name: Refresh, validate, analyse, publish
+
+# Quarterly on the 1st, plus manual runs and pushes to main. The schedule is the
+# point: nobody has to remember to check whether the database moved.
+on:
+  schedule:
+    - cron: "0 6 1 1,4,7,10 *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ["docs/**", "out/**", "data/raw/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::testthat, any::ggrepel
+
+      - name: Run test suite
+        run: Rscript -e 'testthat::test_dir("tests/testthat", stop_on_failure = TRUE)'
+
+      - name: Fetch, validate and diff the How's Life? database
+        run: Rscript R/run_pipeline.R
+
+      - name: Fail on validation errors
+        run: |
+          Rscript -e '
+            i <- readr::read_csv("out/issues.csv", show_col_types = FALSE)
+            e <- subset(i, severity == "error")
+            if (nrow(e) > 0) { print(utils::head(e, 25)); stop(nrow(e), " validation errors") }
+            cat("No validation errors.\n")'
+
+      - name: City layers, environmental indicator, figures, site
+        run: Rscript R/run_environment.R
+
+      - name: Publish the QA report to the run summary
+        if: always()
+        run: cat out/report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: outputs-${{ github.run_number }}
+          path: |
+            out/
+            docs/
+
+      # The How's Life? snapshot, outputs and the site are committed so the next
+      # run has a previous vintage to diff against and GitHub Pages stays current.
+      - name: Commit the new vintage and site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/raw/*.csv data/raw/fua/manifest.csv out docs
+          git diff --staged --quiet || git commit -m "Vintage $(date -u +%Y-%m-%d): refresh, QA, environmental indicator, site"
+          git push
