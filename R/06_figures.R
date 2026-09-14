@@ -227,10 +227,9 @@ fig_decomposition <- function(decomp_path = "out/env/decomposition.csv",
     scale_y_continuous(expand = expansion(mult = c(0, 0.12)), breaks = seq(0, 100, 25)) +
     labs(
       title = glue("Older people in hot OECD cities, {y0} to {y1}:\nin this decade, ageing explains more of the rise than warming"),
-      subtitle = glue("Residents aged 65+ in functional urban areas with more than {hot} days a year of strong heat stress (UTCI ≥ 32 °C), millions. ",
-                      "Heat averaged over {2*d$half_window[1]+1} years around each date.\n",
-                      "Shapley split of the change (interaction shared). Climate share is 10-35% across thresholds and metrics - see the sensitivity table.",
-                      "Balanced panel of {d$n_cities[1]} cities."),
+      subtitle = glue("Residents aged 65+ in functional urban areas with more than {hot} days a year of strong heat stress (UTCI ≥ 32 °C), millions.\n",
+                      "Heat averaged over {2*d$half_window[1]+1} years around each date. Shapley split of the change; interaction shared.\n",
+                      "Climate share is 10-35% across thresholds and metrics (see the sensitivity table). Balanced panel of {d$n_cities[1]} cities."),
       x = NULL, y = "Millions of people aged 65+"
     ) +
     oecd_theme() +

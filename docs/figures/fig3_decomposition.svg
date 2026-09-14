@@ -34,51 +34,52 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MTAuNDA=)'>
-<rect x='0.00' y='0.00' width='648.00' height='410.40' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='0.00' y='-0.000000000000057' width='648.00' height='410.40' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0NDYuNDA=)'>
 </g>
 <defs>
-  <clipPath id='cpNDQuNjV8NjMwLjA3fDExMi4yOXwzNzcuNDM='>
-    <rect x='44.65' y='112.29' width='585.42' height='265.14' />
+  <clipPath id='cpNDQuNjV8NjMwLjA3fDEyNi4xNXwzNzcuNDM='>
+    <rect x='44.65' y='126.15' width='585.42' height='251.28' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNDQuNjV8NjMwLjA3fDExMi4yOXwzNzcuNDM=)'>
-<rect x='44.65' y='112.29' width='585.42' height='265.14' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<g clip-path='url(#cpNDQuNjV8NjMwLjA3fDEyNi4xNXwzNzcuNDM=)'>
+<rect x='44.65' y='126.15' width='585.42' height='251.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 <polyline points='44.65,377.43 630.07,377.43 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
-<polyline points='44.65,308.66 630.07,308.66 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
-<polyline points='44.65,239.89 630.07,239.89 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
-<polyline points='44.65,171.12 630.07,171.12 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
-<line x1='169.60' y1='212.02' x2='215.88' y2='212.02' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
-<line x1='314.22' y1='196.11' x2='360.50' y2='196.11' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
-<line x1='458.84' y1='140.70' x2='505.12' y2='140.70' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
-<rect x='71.26' y='212.02' width='98.34' height='165.41' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
-<rect x='215.88' y='196.11' width='98.34' height='15.91' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
-<rect x='360.50' y='140.70' width='98.34' height='55.40' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
-<rect x='505.12' y='140.70' width='98.34' height='236.73' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
-<text x='120.43' y='207.62' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>60.1 m</text>
-<text x='265.05' y='191.71' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='32.14px' lengthAdjust='spacingAndGlyphs'>+5.8 m</text>
-<text x='409.67' y='136.31' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='37.83px' lengthAdjust='spacingAndGlyphs'>+20.1 m</text>
-<text x='554.29' y='136.31' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>86.1 m</text>
+<polyline points='44.65,312.26 630.07,312.26 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<polyline points='44.65,247.08 630.07,247.08 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<polyline points='44.65,181.91 630.07,181.91 ' style='stroke-width: 0.85; stroke: #E6E9EE; stroke-linecap: butt;' />
+<line x1='169.60' y1='220.66' x2='215.88' y2='220.66' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
+<line x1='314.22' y1='205.58' x2='360.50' y2='205.58' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
+<line x1='458.84' y1='153.08' x2='505.12' y2='153.08' style='stroke-width: 1.07; stroke: #9AA5B4; stroke-linecap: butt;' />
+<rect x='71.26' y='220.66' width='98.34' height='156.77' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
+<rect x='215.88' y='205.58' width='98.34' height='15.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
+<rect x='360.50' y='153.08' width='98.34' height='52.51' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
+<rect x='505.12' y='153.08' width='98.34' height='224.36' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
+<text x='120.43' y='216.27' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>60.1 m</text>
+<text x='265.05' y='201.19' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='32.14px' lengthAdjust='spacingAndGlyphs'>+5.8 m</text>
+<text x='409.67' y='148.68' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='37.83px' lengthAdjust='spacingAndGlyphs'>+20.1 m</text>
+<text x='554.29' y='148.68' text-anchor='middle' style='font-size: 10.24px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='31.84px' lengthAdjust='spacingAndGlyphs'>86.1 m</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0NDYuNDA=)'>
 <text x='39.72' y='380.58' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='39.72' y='311.81' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='39.72' y='243.04' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='39.72' y='174.27' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='39.72' y='315.41' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='39.72' y='250.23' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='39.72' y='185.06' text-anchor='end' style='font-size: 8.80px;fill: #4A5568; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>75</text>
 <text x='120.43' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>2010</text>
 <text x='265.05' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='70.05px' lengthAdjust='spacingAndGlyphs'>Cities got hotter</text>
 <text x='265.05' y='400.33' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='38.33px' lengthAdjust='spacingAndGlyphs'>(climate)</text>
 <text x='409.67' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='77.30px' lengthAdjust='spacingAndGlyphs'>Populations aged</text>
 <text x='409.67' y='400.33' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='62.25px' lengthAdjust='spacingAndGlyphs'>(demography)</text>
 <text x='554.29' y='389.53' text-anchor='middle' style='font-size: 10.00px;fill: #141A24; font-family: "Arial";' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>2020</text>
-<text transform='translate(25.10,244.86) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='122.05px' lengthAdjust='spacingAndGlyphs'>Millions of people aged 65+</text>
-<rect x='45.36' y='84.76' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
-<rect x='108.63' y='84.76' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
-<text x='67.41' y='96.28' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='35.03px' lengthAdjust='spacingAndGlyphs'>Change</text>
-<text x='130.68' y='96.28' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='23.91px' lengthAdjust='spacingAndGlyphs'>Level</text>
-<text x='17.93' y='57.91' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='827.64px' lengthAdjust='spacingAndGlyphs'>Residents aged 65+ in functional urban areas with more than 30 days a year of strong heat stress (UTCI ≥ 32 °C), millions. Heat averaged over 5 years around each date.</text>
-<text x='17.93' y='71.77' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='778.91px' lengthAdjust='spacingAndGlyphs'>Shapley split of the change (interaction shared). Climate share is 10-35% across thresholds and metrics - see the sensitivity table.Balanced panel of 1022 cities.</text>
+<text transform='translate(25.10,251.79) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='122.05px' lengthAdjust='spacingAndGlyphs'>Millions of people aged 65+</text>
+<rect x='45.36' y='98.62' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5BA3DE;' />
+<rect x='108.63' y='98.62' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #245C99;' />
+<text x='67.41' y='110.14' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='35.03px' lengthAdjust='spacingAndGlyphs'>Change</text>
+<text x='130.68' y='110.14' style='font-size: 10.00px;fill: #4A5568; font-family: "Arial";' textLength='23.91px' lengthAdjust='spacingAndGlyphs'>Level</text>
+<text x='17.93' y='57.91' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='596.89px' lengthAdjust='spacingAndGlyphs'>Residents aged 65+ in functional urban areas with more than 30 days a year of strong heat stress (UTCI ≥ 32 °C), millions.</text>
+<text x='17.93' y='71.77' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='459.66px' lengthAdjust='spacingAndGlyphs'>Heat averaged over 5 years around each date. Shapley split of the change; interaction shared.</text>
+<text x='17.93' y='85.63' style='font-size: 11.00px;fill: #4A5568; font-family: "Arial";' textLength='546.34px' lengthAdjust='spacingAndGlyphs'>Climate share is 10-35% across thresholds and metrics (see the sensitivity table). Balanced panel of 1022 cities.</text>
 <text x='17.93' y='25.40' style='font-size: 16.00px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='351.53px' lengthAdjust='spacingAndGlyphs'>Older people in hot OECD cities, 2010 to 2020:</text>
 <text x='17.93' y='42.68' style='font-size: 16.00px; font-weight: bold;fill: #141A24; font-family: "Arial";' textLength='469.00px' lengthAdjust='spacingAndGlyphs'>in this decade, ageing explains more of the rise than warming</text>
 <rect x='0.00' y='410.40' width='648.00' height='36.00' style='stroke-width: 0.75; stroke: none; fill: #0D2240;' />
