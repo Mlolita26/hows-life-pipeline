@@ -1,7 +1,7 @@
-# How's Life? refresh - 2026-09-14
+# How's Life? refresh - 2026-10-01
 
 Source: `https://sdmx.oecd.org/public/rest/data/OECD.WISE.WDP,DSD_HSL@DF_HSL_CWB,1.1/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels`
-Retrieved: 2026-09-14T21:08:44Z (1.1s, 31.7 MB)
+Retrieved: 2026-10-01T12:01:57Z (4.8s, 31.7 MB)
 SHA-256: `33b494c2e5a892f3...`
 Observations: **111,266** across 47 reference areas and 68 indicators
 
@@ -40,6 +40,8 @@ Observations: **111,266** across 47 reference areas and 68 indicators
 
 657 country x indicator cells have no data at all; 1127 are more than 3 years old. See `out/gaps.csv`.
 
-## Changes
+## Changes since the previous vintage
 
-_First vintage on disk; no comparison available._
+| change | n | pct |
+|---|---|---|
+| stable | 111266 | 100 |
